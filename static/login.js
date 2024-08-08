@@ -176,7 +176,12 @@ function passVerified(data){
                     $(".lgcontainer").fadeOut(1000)
                     $(".background").fadeOut(1000)
                     $(".warp-vid").fadeIn(1000)
+                    
                     $(".warp-vid").get(0).play();
+                    setTimeout(function(){
+
+                        $(".logoo").animate({width: "100%", height: "100%", opacity: 1, borderRadius: 0}, 1000)
+                    }, 2000)
                 }, 3000)
             }, 3000)
         }, 2000)

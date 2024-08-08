@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orb | Login</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="background login">
+        <img src="/static/images/bglogin.svg" class="bgimg login" alt="">
+    </div>
+    <video src="/static/warp.mp4" muted class="warp-vid"></video>
+
+    <div class="login-container">
+        <div class="container lgcontainer">
+            <img src="/static/icons/terminal.svg" class="lgicn" alt="">
+            <form action="" method="post">
+                <div class="lg-terminal-view">
+                    <p class="terminal-output" id="to-1"></p>
+                    <p class="terminal-output to" id="to-2"></p>
+                    <div class="terminal-email">
+                        <input type="text" class="terminal-input t-email" placeholder="abc@xyz.com">
+                        <button type="button" class="terminal-check"><img src="/static/icons/terminal-check.svg" class="t-check" alt=""></button>
+                    </div>
+                    <p class="terminal-output to" id="to-3"></p>
+                    <input type="text" class="terminal-input t-pass" placeholder="**********">
+                    <p class="terminal-output" id="to-4"></p>
+                    <p class="terminal-output" id="to-5"></p>
+                    <p class="terminal-output" id="to-6"></p>
+                </div>
+            </form>
+        </div>
+        <div class="container wlcmsg">
+            <p class="wcmsg">Welcome, arnav verma</p>
+        </div>
+        <div class="logoo"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Observer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EaselPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/PixiPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EasePack.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>   
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", (event) => {
+        gsap.registerPlugin(Flip,ScrollTrigger,Observer,ScrollToPlugin,Draggable,MotionPathPlugin,EaselPlugin,PixiPlugin,TextPlugin,RoughEase,ExpoScaleEase,SlowMo,CustomEase)
+        })
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js" integrity="sha256-u0L8aA6Ev3bY2HI4y0CAyr9H8FRWgX4hZ9+K7C2nzdc=" crossorigin="anonymous"></script>
+    <script src="/static/login.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>

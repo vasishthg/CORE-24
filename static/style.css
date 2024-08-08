@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* Display Fonts */
+@font-face {
+    font-family: 'display-xlight-italic';
+    src: url('fonts/Display/PolymathDispDemo-XLightIt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'display-black';
+    src: url('fonts/Display/PolymathDispDemo-Black.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'display-black-italic';
+    src: url('fonts/Display/PolymathDispDemo-BlackIt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'display-bold';
+    src: url('fonts/Display/PolymathDispDemo-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'display-bold-italic';
+    src: url('fonts/Display/PolymathDispDemo-BoldIt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'display-italic';
+    src: url('fonts/Display/PolymathDispDemo-Italic.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'display-light';
+    src: url('fonts/Display/PolymathDispDemo-Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'display-light-italic';
+    src: url('fonts/Display/PolymathDispDemo-LightIt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'display-medium';
+    src: url('fonts/Display/PolymathDispDemo-Medium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'display-medium-italic';
+    src: url('fonts/Display/PolymathDispDemo-MediumIt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'display-regular';
+    src: url('fonts/Display/PolymathDispDemo-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'display-semibold';
+    src: url('fonts/Display/PolymathDispDemo-Semibold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'display-semibold-italic';
+    src: url('fonts/Display/PolymathDispDemo-SemiboldIt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'display-super';
+    src: url('fonts/Display/PolymathDispDemo-Super.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'display-super-italic';
+    src: url('fonts/Display/PolymathDispDemo-SuperIt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'display-thin';
+    src: url('fonts/Display/PolymathDispDemo-Thin.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'display-thin-italic';
+    src: url('fonts/Display/PolymathDispDemo-ThinIt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'display-xlight';
+    src: url('fonts/Display/PolymathDispDemo-XLight.otf') format('opentype');
+}
+
+/* Polymath Fonts */
+@font-face {
+    font-family: 'medium-italic';
+    src: url('fonts/Polymath/PolymathDemo-MediumIt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'regular';
+    src: url('fonts/Polymath/PolymathDemo-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'semibold';
+    src: url('fonts/Polymath/PolymathDemo-Semibold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'semibold-italic';
+    src: url('fonts/Polymath/PolymathDemo-SemiboldIt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'super';
+    src: url('fonts/Polymath/PolymathDemo-Super.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'super-italic';
+    src: url('fonts/Polymath/PolymathDemo-SuperIt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'thin';
+    src: url('fonts/Polymath/PolymathDemo-Thin.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'thin-italic';
+    src: url('fonts/Polymath/PolymathDemo-ThinIt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'xlight';
+    src: url('fonts/Polymath/PolymathDemo-XLight.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'xlight-italic';
+    src: url('fonts/Polymath/PolymathDemo-XLightIt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'black';
+    src: url('fonts/Polymath/PolymathDemo-Black.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'black-italic';
+    src: url('fonts/Polymath/PolymathDemo-BlackIt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'bold';
+    src: url('fonts/Polymath/PolymathDemo-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'bold-italic';
+    src: url('fonts/Polymath/PolymathDemo-BoldIt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'italic';
+    src: url('fonts/Polymath/PolymathDemo-Italic.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'light';
+    src: url('fonts/Polymath/PolymathDemo-Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'light-italic';
+    src: url('fonts/Polymath/PolymathDemo-LightIt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'medium';
+    src: url('fonts/Polymath/PolymathDemo-Medium.otf') format('opentype');
+}
+
+/* Text Fonts */
+@font-face {
+    font-family: 'text-bold';
+    src: url('fonts/Text/PolymathTextDemo-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'text-bold-italic';
+    src: url('fonts/Text/PolymathTextDemo-BoldIt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'text-italic';
+    src: url('fonts/Text/PolymathTextDemo-Italic.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'text-light';
+    src: url('fonts/Text/PolymathTextDemo-Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'text-light-italic';
+    src: url('fonts/Text/PolymathTextDemo-LightIt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'text-medium';
+    src: url('fonts/Text/PolymathTextDemo-Medium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'text-medium-italic';
+    src: url('fonts/Text/PolymathTextDemo-MediumIt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'text-regular';
+    src: url('fonts/Text/PolymathTextDemo-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'text-semibold';
+    src: url('fonts/Text/PolymathTextDemo-Semibold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'text-semibold-italic';
+    src: url('fonts/Text/PolymathTextDemo-SemiboldIt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'text-super';
+    src: url('fonts/Text/PolymathTextDemo-Super.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'text-super-italic';
+    src: url('fonts/Text/PolymathTextDemo-SuperIt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'text-thin';
+    src: url('fonts/Text/PolymathTextDemo-Thin.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'text-thin-italic';
+    src: url('fonts/Text/PolymathTextDemo-ThinIt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'text-xlight';
+    src: url('fonts/Text/PolymathTextDemo-XLight.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'text-xlight-italic';
+    src: url('fonts/Text/PolymathTextDemo-XLightIt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'text-black';
+    src: url('fonts/Text/PolymathTextDemo-Black.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'text-black-italic';
+    src: url('fonts/Text/PolymathTextDemo-BlackIt.otf') format('opentype');
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family: 'display-regular';
+    overflow: overlay;
+}
+
+.background{
+    position: fixed;
+    left: 0;
+    top:0;
+    pointer-events: none;
+    bottom: 0;
+    right: 0;
+    z-index: -100;
+    height: 100%;
+    opacity: 0;
+}
+
+
+.bgimg{
+    pointer-events: none;
+    width: 100%;
+}
+
+.container{
+    position: relative;
+    padding: .75em 1.5em;
+    border-radius: 30px;
+    background: rgba(128, 128, 128, 0.20);
+    box-shadow: 0px -1px 1px 0px rgba(255, 255, 255, 0.10) inset, 0px 1px 1px 0px rgba(255, 255, 255, 0.25) inset, 0px 8px 15px 0px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(50px);
+}
+
+.container.lgcontainer{
+    width: 0;
+    padding: 0;
+    /* width: 60%; */
+    height: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.lgicn{
+    position: absolute;
+    left: 50%;
+    opacity: 0;
+    max-width: 1.3em;
+    transform: translateX(-50%);
+    margin-top: 1.3em;
+}
+
+.terminal-input{
+    border-radius: 19px;
+    outline: none;
+    padding: 1em 1.3em 1em 2em;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.24px;
+    height: 2.2em;
+    width: 40%;
+    color: rgb(218, 218, 218);
+    margin-block-start: 0;
+    border: none;
+    background: rgba(0, 0, 0, 0.01);
+    box-shadow: 0px -1px 1px 0px rgba(255, 255, 255, 0.10) inset, 0px 1px 1px 0px rgba(255, 255, 255, 0.25) inset;
+}
+
+.terminal-input::placeholder{
+    color: rgba(255, 255, 255, 0.319);
+}
+
+.lg-terminal-view{
+    margin-top: 5em;
+    font-family: 'Space Mono';
+    font-size: .9em;
+    line-height: 3em;
+    opacity: 0;
+    margin-left: 2em;
+}
+
+.terminal-output.to{
+    margin-block-end: 0.3em;
+}
+
+.t-email{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.terminal-check{
+    display: inline-block;
+    outline: none;
+    pointer-events: none;
+    border: none;
+    vertical-align: middle;
+    width: 40px;
+    margin-left: 1em;
+    position: relative;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.20);
+}
+
+.t-check{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    max-width: 2.4em;
+    transform: translate(-50%, -50%);
+}
+
+.container.wlcmsg{
+    width: 12%;
+    border-radius: 10em;
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    height: 2em;
+    left: 50%;
+    bottom: 2em;
+    margin-top: 2em;
+    transform: translateX(-50%);
+    border-radius: 100px;
+    background: rgba(60, 60, 60, 0.1);
+    box-shadow: 0px -1px 1px 0px rgba(255, 255, 255, 0.10) inset, 0px 1px 1px 0px rgba(255, 255, 255, 0.25) inset, 0px 8px 15px 0px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(50px);
+}
+
+.wcmsg{
+    font-size: .9em;
+    font-family: "text-regular";
+    letter-spacing: 0.06em;
+    margin-block-start: 0.5em;
+    margin-block-end: 0;
+}
+
+.warp-vid{
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    bottom: 0;
+    right: 0;
+    z-index: -100;
+    width: 100%;
+    opacity: 0;
+}
+
+
+.login-container{
+    overflow-y: hidden;
+}

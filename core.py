@@ -41,6 +41,8 @@ def check_pass():
     cur.close()
     if user:
         print(user)
+        session['loggedin'] = True
+        session['email'] = user['email']
         return jsonify({'success': 'Welcome, ' + user['name'], 'status': 200})
     return abort(400, description='Password incorrect!')
 

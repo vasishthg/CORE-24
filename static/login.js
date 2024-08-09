@@ -170,17 +170,20 @@ function passVerified(data){
             new Typewriter('#to-6', {loop: false, cursor: '', delay: 50}).typeString("> Logging In..").start()
             setTimeout(function(){
                 var tl = gsap.timeline()
-                tl.fromTo(".wlcmsg", {opacity: 0}, {opacity: 1, duration: 1})
+                $(".wlcmsg").fadeIn(1000)
                 $(".wcmsg").text(data['success'])
                 setTimeout(function(){
-                    $(".lgcontainer").fadeOut(1000)
-                    $(".background").fadeOut(1000)
-                    $(".warp-vid").fadeIn(1000)
+                    $(".lgcontainer").fadeOut(600)
+                    $(".background").fadeOut(600)
+                    $(".warp-vid").fadeIn(600)
                     
                     $(".warp-vid").get(0).play();
                     setTimeout(function(){
 
                         $(".logoo").animate({width: "100%", height: "100%", opacity: 1, borderRadius: 0}, 1000)
+                        setTimeout(function(){
+                            window.location.reload()
+                        }, 600)
                     }, 2000)
                 }, 3000)
             }, 3000)

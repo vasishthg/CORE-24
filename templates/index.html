@@ -1,1 +1,100 @@
-e
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orb</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="background dash">
+        <img src="/static/images/bgnav.svg" class="bgimg dash" alt="">
+    </div>
+    <div class="dashboard main"> 
+        <div class="nav">
+            <div class="nav-1 container nav">
+                <p class="time-now">12:30</p>
+            </div>
+            <div class="nav-2 container">
+                <div class="nav2-item">
+                    <img src="/static/icons/home.svg" class="nav-img" alt="">
+                </div>
+                <div class="nav2-item">
+                    <img src="/static/icons/message.svg" class="nav-img" alt="">
+                </div>
+                <div class="nav2-item">
+                    <img src="/static/icons/resources.svg" class="nav-img" alt="">
+                </div>
+                <div class="nav2-item">
+                    <img src="/static/icons/music.svg" class="nav-img" alt="">
+                </div>
+                <div class="nav2-item">
+                    <img src="/static/icons/slope.svg" class="nav-img" alt="">
+                </div>
+            </div>
+            <div class="nav-3 container nav">
+                <div class="temp">
+                    <img src="/static/icons/up.svg" class="updowtemp" alt="">
+                    <p class="temp-txt">25</p>
+                    <img src="/static/icons/dow.svg" class="updowtemp" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="mainlanding" id="ml-1">
+            <div class="main-div container" id="md-1">
+                <div class="rescue-progress">
+                    <div class="rescue-steps">
+                        <div class="rescue-step">
+                            <div class="rescue-blip completed">
+                                <p class="rescue-txt">Confirmation of survival</p>
+                            </div>
+                        </div>
+                        <div class="rescue-step">
+                            <div class="rescue-blip completed">
+                                <p class="rescue-txt">Depart of rescue mission</p>
+                            </div>
+                        </div>
+                        <div class="rescue-step">
+                            <div class="rescue-blip inc">
+                                <p class="rescue-txt">Interception with survivors</p>
+                            </div>
+                        </div>
+                        <div class="rescue-step">
+                            <div class="rescue-blip inc">
+                                <p class="rescue-txt">Reentry into Earth</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class=""></p>
+                </div>
+            </div>
+        </div>
+        <div class="music"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Observer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EaselPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/PixiPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EasePack.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>   
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", (event) => {
+        gsap.registerPlugin(Flip,ScrollTrigger,Observer,ScrollToPlugin,Draggable,MotionPathPlugin,EaselPlugin,PixiPlugin,TextPlugin,RoughEase,ExpoScaleEase,SlowMo,CustomEase)
+        })
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js" integrity="sha256-u0L8aA6Ev3bY2HI4y0CAyr9H8FRWgX4hZ9+K7C2nzdc=" crossorigin="anonymous"></script>
+    <script src="/static/main.js"></script>
+</body>
+</html>
+
+<!-- shubhi.basantani@dpssl.net -->

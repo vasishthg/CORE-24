@@ -6,7 +6,7 @@
     <title>Orb</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
-<body>
+<body style="overflow-y: hidden;">
     <div class="background dash">
         <img src="/static/images/bgnav.svg" class="bgimg dash" alt="">
     </div>
@@ -44,32 +44,87 @@
             <div class="main-div container" id="md-1">
                 <div class="rescue-progress">
                     <div class="rescue-steps">
-                        <div class="rescue-step">
-                            <div class="rescue-blip completed">
-                                <p class="rescue-txt">Confirmation of survival</p>
+                        <div class="rescue-blips">
+                            <div class="rescue-blip comp">
+                                <div class="compl"></div>
                             </div>
-                        </div>
-                        <div class="rescue-step">
-                            <div class="rescue-blip completed">
-                                <p class="rescue-txt">Depart of rescue mission</p>
+                            <div class="rescue-blip comp">
+                                <div class="compl"></div>
                             </div>
-                        </div>
-                        <div class="rescue-step">
                             <div class="rescue-blip inc">
-                                <p class="rescue-txt">Interception with survivors</p>
+                                <div class="incm"></div>
+                            </div>
+                            <div class="rescue-blip inc">
+                                <div class="incm"></div>
                             </div>
                         </div>
-                        <div class="rescue-step">
-                            <div class="rescue-blip inc">
-                                <p class="rescue-txt">Reentry into Earth</p>
-                            </div>
+                        <div class="rescue-txts">
+                            <p class="rescue-txt comp">Confirmation of survival</p>
+                            <p class="rescue-txt comp">Departure of rescue mission</p>
+                            <p class="rescue-txt inc" style="margin-top: 2.75em;">Interception with survivors</p>
+                            <p class="rescue-txt inc" style="margin-bottom: 0; margin-top: 2.75em;">Reentry into Earth</p>
                         </div>
                     </div>
                     <p class=""></p>
                 </div>
             </div>
+            <div class="main-div container" id="md-2">
+                <div class="maindiv-titleh">
+                    <div class="maindiv-head">
+                        <p class="maindiv-title rtn">Routine</p>
+                        <p class="maindiv-desc">Schedule for today</p>
+                    </div>
+                    <div class="add">
+                        <img src="/static/icons/add.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="main-div" id="md-3">
+                <div class="main-div main-grid container">
+                    
+                </div>
+                <div class="main-div main-grid container">
+                    
+                    
+                </div>
+            </div>
+            <div class="main-div" id="md-4">
+                <div class="main-div main-grid container">
+                    
+                </div>
+                <div class="main-div main-grid container">
+                    
+                </div>
+            </div>            
         </div>
-        <div class="music"></div>
+        <div class="music container">
+            <div class="music-nowplaying">
+                <div class="music-1">
+                    <img src="/static/music/thumb/whodatboy.png" class="music-img" alt="">
+                    <div>
+                        <p class="npt nowplaying-title">Who dat boy (feat A$AP Rocky)</p>   
+                        <p class="npt nowplaying-artists">Tyler, The Creator, A$AP Rocky</p>
+                    </div>
+                </div>
+                <div class="music-2">
+                    <div class="music-controls">
+                        <img src="/static/icons/back.svg" class="music-prev" alt="">
+                        <img src="/static/icons/paused.svg" class="music-play" alt="">
+                        <img src="/static/icons/forward.svg" class="music-next" alt="">
+                    </div>
+                    <div class="music-seek">
+                        <div class="music-seek-bar">
+                            <div class="music-seek-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-3">
+                    <img src="/static/icons/lyrics.svg" class="music-options" alt="">
+                    <img src="/static/icons/queue.svg" class="music-options" alt="">
+                    <img src="/static/icons/volm.svg" class="music-options" alt="">
+                </div>
+            </div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>

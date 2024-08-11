@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 /* Display Fonts */
 @font-face {
     font-family: 'display-xlight-italic';
@@ -154,6 +156,7 @@
 @font-face {
     font-family: 'bold';
     src: url('fonts/Polymath/PolymathDemo-Bold.otf') format('opentype');
+    font-weight: 700;
 }
 
 @font-face {
@@ -285,6 +288,7 @@ body{
     top:0;
     pointer-events: none;
     bottom: 0;
+    user-select: none;
     right: 0;
     z-index: -100;
     height: 100%;
@@ -319,8 +323,8 @@ body{
 
 .lgicn{
     position: absolute;
-    left: 50%;
     opacity: 0;
+    left: 50%;
     max-width: 1.3em;
     transform: translateX(-50%);
     margin-top: 1.3em;
@@ -448,15 +452,17 @@ body{
     column-gap: 1em;
     row-gap: 1em;
     position: relative;
-    padding: 1.5em;
-    width: 90%;
-    height: 90%;
-    grid-template-rows: 85% auto;
+    padding: 2em 1.5em;
+    width: 92.5%;
+    position: absolute;
+    margin-top: 0em;
+    height: 100%;
+    grid-template-rows: 80% auto;
 }
 
 .nav{
     position: relative;
-    grid-template-rows: 35% 40% auto;
+    grid-template-rows: 45% 40% auto;
     height: 100%;
 }
 
@@ -470,14 +476,14 @@ body{
 }
 
 .nav-1{
-    height: 10%;
+    height: 13%;
 }
 
 .nav-2{
     height: auto;
     display: grid;
     grid-template-rows: auto auto auto auto;
-    row-gap: 1.5em;
+    row-gap: 1.15em;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
 }
@@ -488,7 +494,7 @@ body{
 }
 
 .nav-3{
-    height: 30%;
+    height: 16%;
     display: grid;
     position: relative;
     grid-template-rows: auto auto auto;
@@ -505,11 +511,263 @@ body{
 }
 
 #md-1{
-    width: 70%;
+    width: 95%;
+}
+
+#md-2{
+    width: 100%;
+    height: 125%;
+}
+
+#md-3{
+    width: 101.5%;
+    display: grid;
+    column-gap: 1.5em;
+    grid-template-columns: auto auto;
+}
+
+#md-4{
+    width: 106.5%;
+    display: grid;
+    height: 60%;
+    margin-top: 15%;
+    column-gap: 1.5em;
+    grid-template-columns: 65% auto;
 }
 
 .mainlanding{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 47% auto;
+    grid-template-rows: 54% auto;
+    width: 100%;
+    column-gap: 2em;
+    row-gap: 1em;
+    height: 96%;
+}
+
+.music.container{
+    width: 96.5%;
+    height: 3.5em;
+    border-radius: 3em;
+    position: absolute;
+    position: absolute;
+    bottom: 6em;
+    border-radius: 55px;
+    background: rgba(255, 255, 255, 0.10);
+    box-shadow: 0px -1px 1px 0px rgba(255, 255, 255, 0.10), 0px 1px 1px 0px rgba(255, 255, 255, 0.25), 0px 8px 15px 0px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(50px);
+    left: 1.5em;
+}
+
+.music-img{
+    max-width: 3em;
+    max-height: 3em;
+    margin-left: 1.5em;
+}
+
+.music-nowplaying{
+    top: 50%;
+    width: 100%;
+    position: absolute;
+    display: grid;
+    grid-template-columns: auto 60% auto;
+    transform: translateY(-50%);
+   
+}
+.music-1{
+    display: grid;
+    grid-template-columns: 20% auto;
+}
+
+.npt{
+    text-overflow: ellipsis;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    letter-spacing: 0.015em;
+
+}
+
+*{
+    overflow-anchor: none !important;
+}
+
+.nowplaying-title{
+    color: #FFF;
+    font-family: "bold", 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    font-size: 1em;
+    letter-spacing: .6px;
+    margin-top: .5em;
+
+}
+
+.nowplaying-artists{
+    font-family: 'text-light', 'Noto Sans', sans-serif;
+    font-size: .75em;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.678);
+    margin-block-start: -.1em;
+    mix-blend-mode: soft-light;
+}
+
+.music-controls{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2em;
+}
+
+.music-2{
+    display: grid;
     grid-template-rows: auto auto;
+    column-gap: 1em;
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    transform: translateX(-50%);
+}
+
+.music-prev, .music-next{
+    max-width: 2em;
+}
+
+.music-play{
+    max-width: 2em;
+}
+
+.music-seek-bar{
+    width: 50%;
+    margin: 0 auto;
+    height: .35em;
+    border-radius: 20px;
+    background: rgba(50, 50, 50, 0.097);
+    position: relative;
+    margin-top: .75em;
+    mix-blend-mode: soft-light;
+    backdrop-filter: blur(20px);
+}
+
+.music-seek-fill{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background: #FFF;
+    border-radius: 20px;
+}
+
+.music-3{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 1.5em;
+    width: 10em;
+    margin-top: .8em;
+    justify-content: flex-end;
+    margin-left: -2em;
+    position: absolute;
+    right: 5em;
+}
+
+.music-options{
+    max-width: 1.7em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.add{
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 72px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 1.75em;
+    right: 2em;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.10);
+}
+
+.maindiv-title{
+    font-size: 2em;
+    font-family: 'display-bold', 'Noto Sans', sans-serif;
+    margin-block-end: 0;
+    letter-spacing: .05em;
+}
+
+.maindiv-desc{
+    margin-block-start: 0;
+    font-size: .65em;
+    font-family: 'display-light';
+    letter-spacing: 0.08em;
+}
+
+.maindiv-head{
+    position: absolute;
+    bottom: 1em;
+    
+    left: 2.5em;
+}
+
+.rescue-blip{
+    width: 2em;
+    height: 2em;
+    border-radius: 72px;
+    display: flex;
+    margin-top: 1em;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.rescue-progress{
+    margin-top: -.5em;
+}
+
+.compl, .incm{
+    width: .5em;
+    height: .5em;
+    border-radius: 72px;
+    filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.incm{
+    background: #F16363;
+
+}
+
+.compl{
+    background: #63F19C;
+}
+
+.rescue-steps{
+    display: grid;
+    width: 45%;
+    margin-left: .5em;
+    grid-template-columns: 15% auto;
+    column-gap: 1em;
+    margin-top: 1em;
+}
+
+.rescue-txt{
+    font-size: .8em;
+    letter-spacing: 0.05em;
+    font-family: 'text-light', 'Noto Sans', sans-serif;    
+    margin-bottom: 2.5em;
+    font-weight: 8800;
+    margin-top: 2em;
+}
+
+.rescue-txt.comp{
+    color: #B7FABE;
+}
+
+.rescue-txt.inc{
+    color: #FFAEAE
 }

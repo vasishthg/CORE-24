@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session, jsonify, abort
 from flask_mysqldb import MySQLdb, MySQL
+import datetime
 
 
 
@@ -16,7 +17,11 @@ mysql = MySQL(app)
 def index():
     if session.get('loggedin') != True:
         return render_template('login.html')
-    return render_template('index.html')
+    cur = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cur.execute('SELECT * FROM recordings')
+    recordings = cur.fetchall()
+    
+    return render_template('index.html', recordings=recordings)
 
 @app.route('/api/email', methods=['POST'])
 def check_email():
@@ -45,6 +50,24 @@ def check_pass():
         session['email'] = user['email']
         return jsonify({'success': 'Welcome, ' + user['name'], 'status': 200})
     return abort(400, description='Password incorrect!')
+
+@app.route('/upload/vid', methods=['POST'])
+def upload_vid():
+    if 'video' not in request.files:
+        return abort(400, description='No file part!')
+    
+    video = request.files['video']
+    if video.filename == '':
+        return abort(400, description='No selected file!')
+    now = datetime.datetime.now()
+    filename = f"recording_at_{now.strftime('%Y-%m-%d_%H-%M-%S')}"
+    path = f"static/recordings/{filename}.mp4"
+    video.save(path)
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursor.execute('INSERT INTO recordings (name, path, uploaded_at) VALUES (%s, %s, %s)', (filename,path,now,))
+    mysql.connection.commit()
+    cursor.close()
+    return jsonify({'success': 'Video uploaded!', 'status': 200})
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -16,21 +16,22 @@
                 <p class="time-now">12:30</p>
             </div>
             <div class="nav-2 container">
-                <div class="nav2-item">
+                <div class="nav2-item" id="to-home">
                     <img src="/static/icons/home.svg" class="nav-img" alt="">
                 </div>
-                <div class="nav2-item">
+                <div class="nav2-item" id="to-messages">
                     <img src="/static/icons/message.svg" class="nav-img" alt="">
                 </div>
-                <div class="nav2-item">
+                <div class="nav2-item" id="to-resources">
                     <img src="/static/icons/resources.svg" class="nav-img" alt="">
                 </div>
-                <div class="nav2-item">
+                <div class="nav2-item" id="to-music">
                     <img src="/static/icons/music.svg" class="nav-img" alt="">
                 </div>
-                <div class="nav2-item">
+                <div class="nav2-item" id="to-slope">
                     <img src="/static/icons/slope.svg" class="nav-img" alt="">
                 </div>
+                <div class="active-blob"></div>
             </div>
             <div class="nav-3 container nav">
                 <div class="temp">
@@ -42,18 +43,66 @@
         </div>
         <div class="mainlanding" id="ml-1">
             <div class="main-div container" id="md-1">
+                <div class="slope">
+                    <iframe class="slopegame" src="https://slopeonline.online/game/Slope-game-og-v1-1/" frameborder="0" border="0" type=""></iframe>
+                </div>
+                <div class="messages">
+                    <div>
+                        <p class="m-title">Messages</p>
+                        <div class="add">
+                            <img src="/static/icons/add.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="messages-view inbox">
+                        <div class="message container">
+                            <p class="message-time">23:45</p>
+                            <p class="message-fromto">Space Station to Earth</p>
+                            <p class="m-sender">Arni Verma</p>
+                            <p class="message-text">im dying dawg save me maaaaaan, its getting kinda lonely up here man, ah mannnn</p>
+                        </div>
+                        <div class="message container">
+                            <p class="message-time">23:45</p>
+                            <p class="message-fromto">Space Station to Earth</p>
+                            <p class="m-sender">Arni Verma</p>
+                            <p class="message-text">im dying dawg save me maaaaaan, its getting kinda lonely up here man, ah mannnn</p>
+                        </div>
+                        <div class="message container">
+                            <p class="message-time">23:45</p>
+                            <p class="message-fromto">Space Station to Earth</p>
+                            <p class="m-sender">Arni Verma</p>
+                            <p class="message-text">im dying dawg save me maaaaaan, its getting kinda lonely up here man, ah mannnn</p>
+                        </div>
+                        <div class="message container">
+                            <p class="message-time">23:45</p>
+                            <p class="message-fromto">Space Station to Earth</p>
+                            <p class="m-sender">Arni Verma</p>
+                            <p class="message-text">im dying dawg save me maaaaaan, its getting kinda lonely up here man, ah mannnn</p>
+                        </div>
+                    </div>
+                    
+                    <div class="messages switcher">
+                        <p class="switcher-item active">Inbox</p>
+                        <p class="switcher-item">Outbox</p>
+                    </div>
+                </div>
                 <div class="rescue-progress">
                     <div class="rescue-steps">
                         <div class="rescue-blips">
+                            <img src="/static/icons/line.svg" class="linee" alt="">
                             <div class="rescue-blip comp">
                                 <div class="compl"></div>
                             </div>
+                            <img src="/static/icons/line.svg" class="linee" style="top: 7.45em;" alt="">
+
                             <div class="rescue-blip comp">
                                 <div class="compl"></div>
                             </div>
+                            <img src="/static/icons/line.svg" class="linee" style="top: 10.55em;" alt="">
+
                             <div class="rescue-blip inc">
                                 <div class="incm"></div>
                             </div>
+
                             <div class="rescue-blip inc">
                                 <div class="incm"></div>
                             </div>
@@ -65,37 +114,161 @@
                             <p class="rescue-txt inc" style="margin-bottom: 0; margin-top: 2.75em;">Reentry into Earth</p>
                         </div>
                     </div>
-                    <p class=""></p>
+                    <div style="grid-template-columns: auto auto; display: grid;">
+                        <div class="maindiv-head">
+                            <p class="maindiv-title rtn" style="font-size: 1.5em;">Rescue Progress</p>
+                            <p class="maindiv-desc">Next update in 5:30hrs</p>
+                        </div>
+                        <div>
+                            <progress value="50" max="100" class="prog"></progress>
+
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="main-div container" id="md-2">
-                <div class="maindiv-titleh">
-                    <div class="maindiv-head">
-                        <p class="maindiv-title rtn">Routine</p>
-                        <p class="maindiv-desc">Schedule for today</p>
+                <div class="aicall">
+                    <p class="m-title">AI Call</p>
+                    <video src="" autoplay class="avideo" id="avideo"></video>
+                    <div class="ai-controls">
+                        <p class="ac-t">Choose someone to talk to</p>
+                        <div class="caller-options">
+                            <div class="caller-option" id="caller-1">
+                                <img src="/static/images/avatar.png" alt="" class="c-av">
+                                <p class="cname">Sarah</p>
+                            </div>
+                            <div class="caller-option" id="caller-2">
+                                <img src="/static/images/avatar.png" alt="" class="c-av">
+                                <p class="cname">Sarah</p>
+                            </div>
+                            <div class="caller-option" id="caller-3">
+                                <img src="/static/images/avatar.png" alt="" class="c-av">
+                                <p class="cname">Sarah</p>
+                            </div>
+                            <div class="caller-option" id="caller-4">
+                                <img src="/static/images/avatar.png" alt="" class="c-av">
+                                <p class="cname">Sarah</p>
+                            </div>
+                            <div class="caller-option" id="caller-5">
+                                <img src="/static/images/avatar.png" alt="" class="c-av">
+                                <p class="cname">Sarah</p>
+                            </div>
+                        </div>
+                        <div class="call">
+                            <div class="callcont">
+                                <div class="call-captions-wrapper">
+                                    <div class="call-captions">
+                                        It's been a long day without you, my friend<br>
+                                        And I'll tell you all about it when I see you again<br>
+                                        We've come a long way from where we began<br>
+                                        Oh, I'll tell you all about it when I see you again<br>
+                                        When I see you again<br>
+                                        When I see you again
+                                    </div>
+                                </div>
+                                <div class="call-details">
+                                    <div class="call-caller">
+                                        <img src="/static/images/avatar.png" alt="" class="c-av">
+                                        <p class="cname" style="margin-bottom: 3em;">Sarah</p>
+                                        <svg class="mme" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+                                            <path d="M11.5 5.27083V17.7292" stroke="#00FF66" stroke-width="1.5" stroke-linecap="round"/>
+                                            <path d="M15.8125 1.91667V21.0833" stroke="#00FF66" stroke-width="1.5" stroke-linecap="round"/>
+                                            <path d="M2.875 5.27083V17.7292" stroke="#00FF66" stroke-width="1.5" stroke-linecap="round"/>
+                                            <path d="M20.125 7.1875V15.8125" stroke="#00FF66" stroke-width="1.5" stroke-linecap="round"/>
+                                            <path d="M7.1875 8.625V14.375" stroke="#00FF66" stroke-width="1.5" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="call-startbtn callbtn">End</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="add">
-                        <img src="/static/icons/add.svg" alt="">
+                </div>
+
+                <div class="dash-routine">
+                    <div class="schedule">
+                        <div class="times">
+                            <div class="time">16:00</div>
+                            <div class="time">17:00</div>
+                            <div class="time">18:00</div>
+                            <div class="time">19:00</div>
+                            <div class="time">20:00</div>
+                            <div class="time">21:00</div>
+                            <div class="time">22:00</div>
+                            <div class="time">23:00</div>
+                        </div>
+                        <div class="events">
+                            <div class="event">
+                                <p class="event-title">Exercise</p>
+                                <div class="timee">17:30-19:30</div>
+                            </div>
+                            <div class="event">
+                                <p class="event-title">Exercise</p>
+                                <div class="timee">17:30-19:30</div>
+                            </div>
+                            <div class="event">
+                                <p class="event-title">Exercise</p>
+                                <div class="timee">17:30-19:30</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="maindiv-titleh">
+                        <div class="maindiv-head">
+                            <p class="maindiv-title rtn">Routine</p>
+                            <p class="maindiv-desc">Schedule for today</p>
+                        </div>
+                        <div class="add">
+                            <img src="/static/icons/add.svg" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="main-div" id="md-3">
                 <div class="main-div main-grid container">
-                    
+                    <div class="recordings">
+                        {% for recording in recordings %}
+                        <div class="recording container" >
+                            <div style="display: inline-block;
+                            vertical-align: middle;">
+                                <p class="recording-name">My recording at 3:39PM 12/2/3</p>
+                                <p class="recording-date">12/2/3</p>
+                            </div>
+                            <img src="/static/icons/bin.svg" class="r-del" alt="">
+                        </div>
+                       
+                        {% endfor %}
+                    </div>
+                    <div class="maindiv-head">
+                        <p class="maindiv-title rtn" style="font-size: .9em; margin-left: -1em; margin-bottom: .25em; font-family: 'display-medium', 'Noto Sans', sans-serif;">My recordings</p>
+                    </div>
                 </div>
                 <div class="main-div main-grid container">
-                    
-                    
+                    <div class="camera-selector selector"></div>
+                    <div class="mic-selector selector"></div>
+                    <div class="duration"><p class="dur">0:00</p></div>
+                    <video class="rvideo" autoplay id="rvideo"></video>
+                    <div class="novidpl"><img src="/static/icons/novidpl.svg" class="novpl" alt=""></div>
+                    <div class="record-controls">
+                        <div class="controls-grid">
+                            <div class="control-btn stop">
+                                <p class="control-txt">Stop</p>
+                            </div>
+                            <div class="control-btn record">
+                                <img src="/static/icons/record.svg" class="record-icon" alt="">
+                                <p class="control-txt">Record</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="main-div" id="md-4">
-                <div class="main-div main-grid container">
-                    
+                <div class="main-div md4-div main-grid container">
                 </div>
-                <div class="main-div main-grid container">
-                    
+                <div class="main-div md4-div2 main-grid container">
                 </div>
-            </div>            
+            </div>
+            <div class="main-div container" id="md-5"></div>
         </div>
         <div class="music container">
             <div class="music-nowplaying">

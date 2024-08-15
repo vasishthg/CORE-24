@@ -35,54 +35,110 @@
             </div>
             <div class="nav-3 container nav">
                 <div class="temp">
-                    <img src="/static/icons/up.svg" class="updowtemp" alt="">
-                    <p class="temp-txt">25</p>
-                    <img src="/static/icons/dow.svg" class="updowtemp" alt="">
+                    <img src="/static/icons/up.svg" class="updowtemp" id="temp-up" alt="">
+                    <p class="temp-txt">19</p>
+                    <img src="/static/icons/dow.svg" class="updowtemp" id="temp-down" alt="">
                 </div>
             </div>
         </div>
         <div class="mainlanding" id="ml-1">
             <div class="main-div container" id="md-1">
+                <div class="spaceship">
+                    <div>
+                        <div class="maindiv-head">
+                            <p class="maindiv-title rtn" style="font-size: 1.5em; margin-bottom: .35em;">Spaceship</p>
+                        </div>
+                        <div class="spaceship-main">
+                            <div class="fuel-ef container">
+                                <div class="fuel-chart">
+                                    <canvas id="fuelchart"></canvas>
+                                </div>
+                                <p class="m-title" style="font-size: 1em;">Fuel efficiency</p>
+                            </div>    
+                            <div class="sp-align container">
+                                
+                                <p style="font-family: 'regular', 'noto sans', sans-serif; font-size: .8em; font-weight: 100; display: inline-block; vertical-align: middle;">Controls</p>
+                                <img style="display: inline-block;vertical-align: middle; margin-left: .5em; max-width: 10px;" src="/static/icons/dow.svg" alt="">
+                                <img src="/static/icons/reset.svg" alt="">
+                                
+
+                                    <div style="display: grid;
+                                    grid-template-columns: 7em 7em; grid-template-rows: auto auto; gap: .5em;display: flexbox;
+                                    justify-content: center;
+                                    align-items: center;
+                                    margin-left: 1.5em;
+                                    margin-bottom: 1em;
+                                    ">
+                                        <div class="align-axis x">
+                                            <p class="align-title">Boost (X)</p>
+                                            <form action="">
+                                                <input type="number" inputmode="numeric" class="align-input" value="34">
+                                        </div>
+                                        <div class="align-axis y">
+                                            <p class="align-title">Boost (Z)</p>
+                                                <input type="number" inputmode="numeric" class="align-input" value="34">
+                                        </div>
+                                        
+                                        <div class="align-axis z">
+                                            <p class="align-title">Airlock</p>
+                                                <input type="text" inputmode="numeric" class="align-input" value="On" readonly>
+                                        </div>
+                                        <div class="align-axis r">
+                                            <p class="align-title">Rotate (º)</p>
+                                                <input type="number" max="180" min="0" inputmode="numeric" class="align-input" value="34">
+                                            </form>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="slope">
                     <iframe class="slopegame" src="https://slopeonline.online/game/Slope-game-og-v1-1/" frameborder="0" border="0" type=""></iframe>
                 </div>
                 <div class="messages">
+                    <div class="modal">
+                        <form action="" class="message-send container">
+                            <input type="text" class="message-input" placeholder="Type your message">
+                            <button class="message-sendbtn" type="submit"><img src="/static/icons/send.svg" class="sbimg" alt=""></button>
+                        </form>
+                    </div>
                     <div>
                         <p class="m-title">Messages</p>
-                        <div class="add">
+                        <div class="add madd">
                             <img src="/static/icons/add.svg" alt="">
                         </div>
                     </div>
                     <div class="messages-view inbox">
+                        {% for r in recieved %}
                         <div class="message container">
-                            <p class="message-time">23:45</p>
-                            <p class="message-fromto">Space Station to Earth</p>
-                            <p class="m-sender">Arni Verma</p>
-                            <p class="message-text">im dying dawg save me maaaaaan, its getting kinda lonely up here man, ah mannnn</p>
+                            <p class="message-time">{{r['time'].strftime('%H:%M')}}</p>
+                            <p class="message-fromto">{{r['from']}} to {{r['to']}}</p>
+                            <p class="m-sender">inbox</p>
+                            <p class="message-text">{{r['content']}}</p>
                         </div>
+                        {% endfor %}
+                    </div>
+                    <div class="messages-view outbox">
+                        {% for s in sent %}
                         <div class="message container">
-                            <p class="message-time">23:45</p>
-                            <p class="message-fromto">Space Station to Earth</p>
-                            <p class="m-sender">Arni Verma</p>
-                            <p class="message-text">im dying dawg save me maaaaaan, its getting kinda lonely up here man, ah mannnn</p>
+                            <p class="message-time">{{s['time'].strftime('%d %b')}} {{s['time'].strftime('%H:%M')}}</p>
+                            <p class="message-fromto">{{s['from']}} to {{s['to']}}</p>
+                            <p class="m-sender">
+                                {% if (datetime.datetime.now() - s['time']).total_seconds() >= 3 * 60 * 60 %}
+                                    Outbox
+                                {% else %}
+                                    ETA: {{(3*60) -((datetime.datetime.now() - s['time']).total_seconds() // 60)}} minutes
+                                {% endif %}
+                            </p>
+                            <p class="message-text">{{s['content']}}</p>
                         </div>
-                        <div class="message container">
-                            <p class="message-time">23:45</p>
-                            <p class="message-fromto">Space Station to Earth</p>
-                            <p class="m-sender">Arni Verma</p>
-                            <p class="message-text">im dying dawg save me maaaaaan, its getting kinda lonely up here man, ah mannnn</p>
-                        </div>
-                        <div class="message container">
-                            <p class="message-time">23:45</p>
-                            <p class="message-fromto">Space Station to Earth</p>
-                            <p class="m-sender">Arni Verma</p>
-                            <p class="message-text">im dying dawg save me maaaaaan, its getting kinda lonely up here man, ah mannnn</p>
-                        </div>
+                        {% endfor %}
                     </div>
                     
                     <div class="messages switcher">
-                        <p class="switcher-item active">Inbox</p>
-                        <p class="switcher-item">Outbox</p>
+                        <p class="switcher-item active" id="to-inbox">Inbox</p>
+                        <p class="switcher-item" id="to-outbox">Outbox</p>
                     </div>
                 </div>
                 <div class="rescue-progress">
@@ -178,7 +234,7 @@
                                             <path d="M7.1875 8.625V14.375" stroke="#00FF66" stroke-width="1.5" stroke-linecap="round"/>
                                         </svg>
                                     </div>
-                                    <div class="call-startbtn callbtn">End</div>
+                                    <div class="call-startbtn callbtn" id="endbtn">End</div>
                                 </div>
                             </div>
                         </div>
@@ -264,11 +320,91 @@
             </div>
             <div class="main-div" id="md-4">
                 <div class="main-div md4-div main-grid container">
+                    <div class="airlock container">
+                        <div class="ab"></div>
+                        <p class="abt">Shields</p>
+                    </div>
                 </div>
                 <div class="main-div md4-div2 main-grid container">
+                    <div class="maindiv-head">
+                        <div style="margin-left: 1em;">
+                            <div class="fod" style="margin-top: -2em; padding:1.6em 1.7em; margin-left: -1em; margin-bottom: 1em;">
+                                <p style="display: inline-block;vertical-align: middle;font-size: .9em; margin-block: 0; font-family: 'regular';">Days until end of food</p>
+                                <p style="display: inline-block;vertical-align: middle; margin-left: 3em; font-size: 1.4em;margin-block: 0; font-family: 'display-bold';">120</p>
+                            </div>
+                            <div class="fodd">
+                                <div class="container foddd">
+                                    <p class="fs">13,345</p>
+                                    <p class="fstat">Calories today</p>
+                                </div>
+                                <div class="container foddd">
+                                    <p class="fs">13,345</p>
+                                    <p class="fstat">Calories today</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="maindiv-title rtn" style="font-size: 1.5em; margin-bottom: .35em;">Food</p>
+                    </div>
                 </div>
             </div>
-            <div class="main-div container" id="md-5"></div>
+            <div class="main-div container" id="md-5">
+                <div class="workout switcher">
+                    <p class="switcher-item active">Workout</p>
+                    <p class="switcher-item">Health</p>
+                </div>
+                    <div style="display: grid;
+                    grid-template-columns: auto auto;
+                    margin-top: 6.5em;
+                    margin-left: .95em;
+                    column-gap: 1em;
+                    ">
+
+                        <div class="fod f" style="display: grid; grid-template-rows: auto auto;text-align: center; width: 10em;">
+                            <p class="udd">98%</p>
+                            <p class="ud">Health Score</p>
+                        </div>
+                        
+                        
+                        <div class="fod f" style="display: grid; grid-template-rows: auto auto;text-align: center; width: 10em;">
+                            <p class="udd">12,324</p>
+                            <p class="ud">Steps today</p>
+                        </div>
+                    </div>
+                    <div class="selec">
+                        <p style="font-size: .8em; font-family: 'regular'; letter-spacing: 0.04em;
+                        margin-top: 1.4em;
+                        margin-left: .7em;">Select workout type</p>
+                        <div class="workout-selector">
+                            <div class="workout-type">
+                                <img src="/static/icons/run.svg" class="workout-icon" alt="">
+                            </div>
+                            <div class="workout-type">
+                                <img src="/static/icons/cycle.svg" class="workout-icon" alt="">
+                            </div>
+                            <div class="workout-type">
+                                <img src="/static/icons/weight.svg" class="workout-icon" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-left: 1.5em; margin-top: 1.6em;">
+                        <p style="font-family: 'display-regular';
+                        letter-spacing: 0.03em;">Intensity</p>
+                        <div class="intensity-selector">
+                            <img src="/static/icons/i1.svg" class="is-img" alt="">
+                            <div class="is">
+                                <div class="is-i"></div>
+                                <div class="is-i"></div>
+                                <div class="is-i active"></div>
+                                <div class="is-i"></div>
+                            </div>
+                            <img src="/static/icons/i2.svg" class="is-img" alt="">
+                        </div>
+                        <div class="startworkout container">
+                            <p class="startworkout-txt">Start workout</p>
+                        </div>
+                    </div>
+
+            </div>
         </div>
         <div class="music container">
             <div class="music-nowplaying">
@@ -313,6 +449,9 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>   
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+
     
     <script>
         document.addEventListener("DOMContentLoaded", (event) => {
@@ -324,5 +463,3 @@
     <script src="/static/main.js"></script>
 </body>
 </html>
-
-<!-- shubhi.basantani@dpssl.net -->
